@@ -48,9 +48,8 @@
             font-size: 25px;
             white-space: nowrap;
             overflow: hidden;
-            border-right: 3px solid #ffffff;
             display: inline-block;
-            animation: typing 6s steps(30, end) infinite, blink 0.5s step-end infinite alternate;
+            animation: typing 4s steps(40, end), blink 0.5s step-end infinite alternate;
         }
         @keyframes typing {
             from {
@@ -158,7 +157,9 @@
     <div class="falling-snow"></div>
     <header>
         <h1>Callme_Spayodemon</h1>
-        <p class="typing-effect"><span>Bot Developer, Web Developer, Ethical Networker...</span></p>
+        <p class="typing-effect">
+            <span id="typing-text"></span>
+        </p>
         <nav>
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
@@ -215,5 +216,28 @@
         <p>Coding is my Ethic and I love it; if you like it then crown it</p>
         <p>&copy; 2025 @Spayodemon. All Rights Reserved.</p>
     </footer>
+    <script>
+        const typingTextElement = document.getElementById("typing-text");
+        const words = ["Bot Developer", "Web Developer", "Ethical Networker"];
+        let wordIndex = 0;
+        let charIndex = 0;
+
+        function typeEffect() {
+            if (charIndex < words[wordIndex].length) {
+                typingTextElement.textContent += words[wordIndex][charIndex];
+                charIndex++;
+                setTimeout(typeEffect, 150); // Adjust typing speed here
+            } else {
+                setTimeout(() => {
+                    typingTextElement.textContent = "";
+                    charIndex = 0;
+                    wordIndex = (wordIndex + 1) % words.length;
+                    typeEffect();
+                }, 2000); // Delay before switching words
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", typeEffect);
+    </script>
 </body>
 </html>
