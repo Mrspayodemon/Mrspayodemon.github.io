@@ -6,158 +6,80 @@
     <title>CyberDemon_portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* General Styles */
         body {
             font-family: Arial, sans-serif;
+            background-color: #1e1e2f;
+            color: #ffffff;
             margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: #111;
-            color: #fff;
+            overflow-x: hidden;
         }
-
         header {
             text-align: center;
             padding: 20px;
-            background-color: #333;
-            color: white;
+            background: linear-gradient(45deg, #a6f0ff, #dd77ff, #f1a8ff);
+            color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
-
-        header h1 {
-            font-size: 2.5em;
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
         }
-
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background: #333;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #ff79c6;
+            transform: scale(1.1);
+        }
         .typing-effect span {
-            display: inline-block;
-            animation: typing 8s steps(40) infinite, blink 0.8s infinite;
+            font-size: 24px;
             white-space: nowrap;
             overflow: hidden;
-            border-right: 2px solid #fff;
+            border-right: 3px solid #ffffff;
+            display: inline-block;
+            animation: typing 4s steps(30, end) infinite, blink 0.5s step-end infinite alternate;
         }
-
         @keyframes typing {
             from {
-                width: 0%;
+                width: 0;
             }
             to {
                 width: 100%;
             }
         }
-
         @keyframes blink {
             50% {
                 border-color: transparent;
             }
         }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            background-color: #444;
-            padding: 10px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: white;
-            font-size: 1.2em;
-            font-weight: bold;
-            transition: transform 0.2s;
-        }
-
-        nav a:hover {
-            transform: scale(1.1);
-        }
-
-        /* Section Styles */
         section {
-            padding: 20px 10px;
-            margin: 0 auto;
+            padding: 50px;
+            text-align: center;
         }
-
-        .container {
+        .about, .experience, .services, .contact {
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
             margin: 20px auto;
             padding: 20px;
+            max-width: 800px;
             border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-            background-color: #222;
-            transition: box-shadow 0.3s ease-in-out;
         }
-
-        .container:hover {
-            box-shadow: 0 0 20px #00ffff, 0 0 20px #ff0000, 0 0 20px #00ff00, 0 0 20px #ffffff;
-        }
-
-        .container h2 {
-            text-align: center;
-            font-size: 2em;
-        }
-
-        .container p {
-            font-size: 1.3em;
-            line-height: 1.6;
-        }
-
-        /* For List */
-        ul {
-            padding-left: 20px;
-        }
-
-        ul li {
-            font-size: 1.2em;
-            margin: 5px 0;
-        }
-
-        ul li::marker {
-            content: "➤";
-            color: #00ffff;
-            font-size: 1.5em;
-        }
-
-        /* Responsive Grid */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        /* Footer */
         footer {
             text-align: center;
-            background-color: #222;
-            color: white;
             padding: 20px;
-            font-size: 1.1em;
+            background: linear-gradient(45deg, #a6f0ff, #dd77ff, #f1a8ff);
+            color: #ffffff;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
         }
-
-        footer p {
-            font-size: 1.2em;
-        }
-
-        /* Adjust Links */
-        a {
-            color: white;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* Responsive Fix */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
-            }
-
-            nav a {
-                font-size: 1em;
-            }
-
-            footer p {
-                font-size: 1em;
-            }
+        .delist {
+            listing-style-type: bullets:
         }
     </style>
 </head>
@@ -173,41 +95,79 @@
         </nav>
     </header>
     <section id="about">
-        <div class="container">
+        <div class="about">
             <h2>About Me</h2>
-            <p>Hi, I'm Salum Seleman Sleyum, a university student at the Institute of Finance Management (IFM), Tanzania. I live in Dar Es Salaam. This is my personal portfolio where you can know more about me and the services I can provide to you. Kindly you are warmly welcome.</p>
+            <p>Hi, I'm Salum Seleman Sleyum, a university student at the Institute of Finance Management (IFM), Tanzania. I live in Dar Es Salaam.This is my personal portfolio where you can know more about me and the services i acn provide to you. Kindly you are warmly welcome</p>
         </div>
     </section>
     <section id="experience">
-        <div class="container">
+        <div class="experience">
             <h2>Experience</h2>
-            <p>I have 5 years of experience in programming, specializing in web development, bot creation, and network profession.</p>
+            <p>I have 5 years of experience in programming, specializing in web development, bot creation, and network proffession.</p>
         </div>
     </section>
     <section id="services">
-        <div class="container">
+        <div class="services">
             <h2>Services</h2>
             <p>I offer the following services:</p>
             <ul>
-                <li>Telegram Bot Development</li>
-                <li>Web Portfolios</li>
-                <li>To-Do Lists</li>
-                <li>Websites</li>
-                <li>And many more...</li>
+                <li class="delist">Telegram Bot Development</li>
+                <li class="delist">Web Portfolios</li>
+                <li class="delist">To-Do Lists</li>
+                <li class="delist">Websites</li>
+                <li class="delist">And many more...</li>
             </ul>
         </div>
     </section>
     <section id="contact">
-        <div class="container">
+        <div class="contact">
             <h2>Contact Me</h2>
-            <p>Email: <a href="mailto:spayo@example.com">spayo@example.com</a></p>
-            <p>Telegram: <a href="https://t.me/yourusername" target="_blank">Telegram Link</a></p>
-            <p>Instagram: <a href="https://instagram.com/yourusername" target="_blank">Instagram Link</a></p>
+            <p>Phone: +255625661190</p>
+            <p>Email: cobelloavexer@gmail.com</p>
+            <p>Instagram: <a href="https://instagram.com/Spayo_demon" target="_blank">@Spayo_demon</a></p>
+            <p>Telegram: <a href="https://t.me/Spayodemon" target="_blank">@Spayodemon</a></p>
         </div>
     </section>
     <footer>
-        <p>Coding is my ethic and I love it. If you like it, then crown it.</p>
+        <p>Coding is my Ethic and i love it,if you like it then crown it</p>
         <p>&copy; 2025 @Spayodemon. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        const typingEffect = document.querySelector('.typing-effect span');
+        const texts = ["Bot Developer", "Web Developer", "Ethical Networker"];
+        let index = 0;
+        let charIndex = 0;
+        let currentText = "";
+        const typingSpeed = 150;
+        const erasingSpeed = 100;
+
+        function type() {
+            if (charIndex < texts[index].length) {
+                currentText += texts[index][charIndex];
+                typingEffect.textContent = currentText;
+                charIndex++;
+                setTimeout(type, typingSpeed);
+            } else {
+                setTimeout(erase, 2000);
+            }
+        }
+
+        function erase() {
+            if (charIndex > 0) {
+                currentText = currentText.slice(0, -1);
+                typingEffect.textContent = currentText;
+                charIndex--;
+                setTimeout(erase, erasingSpeed);
+            } else {
+                index = (index + 1) % texts.length;
+                setTimeout(type, 500);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(type, 1000);
+        });
+    </script>
 </body>
 </html>
