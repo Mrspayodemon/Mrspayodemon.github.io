@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CyberDemon_portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/1f707df0d7.js" crossorigin="anonymous"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #1e1e2f;
+            background-color: #0A0A0A;
             color: #ffffff;
             margin: 0;
             overflow-x: hidden;
@@ -40,16 +41,16 @@
             transform: scale(1.1);
         }
         .typing-effect span {
-            font-size: 32px;
+            font-size: 25px;
             white-space: nowrap;
             overflow: hidden;
             border-right: 3px solid #ffffff;
             display: inline-block;
-            animation: typing 6s steps(40, end) infinite, blink 0.5s step-end infinite alternate;
+            animation: typing 6s steps(0, end) infinite, blink 6s step-end infinite alternate;
         }
         @keyframes typing {
             from {
-                width: 0;
+                width: 20px;
             }
             to {
                 width: 100%;
@@ -71,12 +72,15 @@
         }
         .about, .experience, .services, .contact {
             background: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
             margin: 20px auto;
             padding: 20px;
             max-width: 800px;
             border-radius: 10px;
+           box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+           animation: shadows 2s infinite;
+           
         }
+        
         ul {
             list-style-type: none;
             padding: 0;
@@ -117,6 +121,68 @@
                 transform: translateY(100%);
             }
         }
+        
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background: #18191f;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 920px;
+}
+.container__icon-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #18191f;
+  color: #fff;
+  font-size: 5rem;
+  width: 8rem;
+  height: 8rem;
+  box-shadow: 2px 2px 2px #00000080, 10px 1px 12px #00000080,
+    2px 2px 10px #00000080, 2px 2px 3px #00000080, inset 2px 2px 10px #00000080,
+    inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080,
+    inset 2px 2px 10px #00000080;
+  border-radius: 29px;
+  /*   padding: 11px 19px; */
+  margin: 0 40px;
+  animation: animate 3s linear infinite;
+  text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff,
+    0 0 200px #0072ff;
+}
+.apple {
+  animation: animate 3s linear infinite;
+}
+.twitter {
+  animation: animate 3s linear 0.3s infinite;
+}
+.facebook {
+  animation: animate 3s linear 0.7s infinite;
+}
+.github {
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animate {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+
     </style>
 </head>
 <body>
@@ -165,6 +231,21 @@
             <p>Telegram: <a href="https://t.me/Spayodemon" target="_blank">@Spayodemon</a></p>
         </div>
     </section>
+     <div class="container">     
+        <div class="container__icon-wrapper">
+            <i class="container__icon fa fa-apple apple"></i>
+        </div>
+        <div class="container__icon-wrapper">
+            <i class="container__icon fa fa-twitter twitter"></i>
+        </div>
+        <div class="container__icon-wrapper">
+            <i class="container__icon fa fa-github-square github"></i>
+        </div>
+        <div class="container__icon-wrapper">
+            <i class="container__icon fa fa-facebook-square facebook"></i>
+            
+        </div>
+    </div>
     <footer>
         <p>Coding is my Ethic and I love it; if you like it then crown it</p>
         <p>&copy; 2025 @Spayodemon. All Rights Reserved.</p>
