@@ -11,9 +11,11 @@
             font-family: Arial, sans-serif;
             background-color: #0A0A0A;
             color: #ffffff;
-            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-contents: center;
         }
         header {
             text-align: center;
@@ -25,15 +27,15 @@
         }
         nav {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
-            overflow: scrolling;
         }
         nav a {
             text-decoration: none;
             color: #ffffff;
             font-size: 20px;
-            padding: 15px 25px;
+            padding: 10px 20px;
             border-radius: 5px;
             background: #333;
             transition: transform 0.3s, background-color 0.3s;
@@ -48,11 +50,11 @@
             overflow: hidden;
             border-right: 3px solid #ffffff;
             display: inline-block;
-            animation: typing 6s steps(0, end) infinite, blink 6s step-end infinite alternate;
+            animation: typing 6s steps(40, end) infinite, blink 0.5s step-end infinite alternate;
         }
         @keyframes typing {
             from {
-                width: 20px;
+                width: 0;
             }
             to {
                 width: 100%;
@@ -69,7 +71,7 @@
             100% { background-position: 0% 50%; }
         }
         section {
-            padding: 50px;
+            padding: 20px;
             text-align: center;
         }
         .about, .experience, .services, .contact {
@@ -78,11 +80,8 @@
             padding: 20px;
             max-width: 800px;
             border-radius: 10px;
-           box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-           animation: shadows 2s infinite;
-           
+            box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
         }
-        
         ul {
             list-style-type: none;
             padding: 0;
@@ -104,6 +103,36 @@
         a {
             color: #ffffff;
         }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .container__icon-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #18191f;
+            color: #fff;
+            font-size: 3rem;
+            width: 70px;
+            height: 70px;
+            margin: 10px;
+            border-radius: 50%;
+            box-shadow: 2px 2px 10px #00000080, inset 2px 2px 10px #00000080;
+            animation: animate 3s linear infinite;
+            text-shadow: 0 0 10px #0072ff, 0 0 20px #0072ff;
+        }
+        @keyframes animate {
+            from {
+                filter: hue-rotate(0deg);
+            }
+            to {
+                filter: hue-rotate(360deg);
+            }
+        }
         .falling-snow {
             position: fixed;
             top: 0;
@@ -112,7 +141,7 @@
             height: 100%;
             pointer-events: none;
             z-index: 9999;
-            background: url('snowflake.png') no-repeat center center;
+            background: url('snowflake.png') repeat center center;
             animation: snow-fall 10s linear infinite;
         }
         @keyframes snow-fall {
@@ -123,62 +152,6 @@
                 transform: translateY(100%);
             }
         }
-        
-}
-body {
-  height: 100vh;
-  width: 100vw;
-  background: #18191f;
-}
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
-  max-width: 800px;
-  padding-left: 0px;
-}
-.container__icon-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  background-color: #18191f;
-  color: #fff;
-  font-size: 5rem;
-  width: 6rem;
-  height: 6rem;
-  box-shadow: 2px 2px 2px #00000080, 10px 1px 12px #00000080,
-    2px 2px 10px #00000080, 2px 2px 3px #00000080, inset 2px 2px 10px #00000080,
-    inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080,
-    inset 2px 2px 10px #00000080;
-  border-radius: 29px;
-  /*   padding: 11px 19px; */
-  margin: 0 40px;
-  animation: animate 3s linear infinite;
-  text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff,
-    0 0 200px #0072ff;
-}
-.apple {
-  animation: animate 3s linear infinite;
-}
-.twitter {
-  animation: animate 3s linear 0.3s infinite;
-}
-.github {
-  animation: animate 3s linear infinite;
-}
-
-@keyframes animate {
-  from {
-    filter: hue-rotate(0deg);
-  }
-  to {
-    filter: hue-rotate(360deg);
-  }
-}
-
-
     </style>
 </head>
 <body>
@@ -227,57 +200,20 @@ body {
             <p>Telegram: <a href="https://t.me/Spayodemon" target="_blank">@Spayodemon</a></p>
         </div>
     </section>
-     <div class="container">     
+    <div class="container">
         <div class="container__icon-wrapper">
-            <i class="container__icon fa fa-apple apple"></i>
+            <i class="fa fa-apple"></i>
         </div>
         <div class="container__icon-wrapper">
-            <i class="container__icon fa fa-twitter twitter"></i>
+            <i class="fa fa-twitter"></i>
         </div>
         <div class="container__icon-wrapper">
-            <i class="container__icon fa fa-github-square github"></i>
+            <i class="fa fa-github"></i>
         </div>
-        
     </div>
     <footer>
         <p>Coding is my Ethic and I love it; if you like it then crown it</p>
         <p>&copy; 2025 @Spayodemon. All Rights Reserved.</p>
     </footer>
-    <script>
-        const typingEffect = document.querySelector('.typing-effect span');
-        const texts = ["Bot Developer", "Web Developer", "Ethical Networker"];
-        let index = 0;
-        let charIndex = 0;
-        let currentText = "";
-        const typingSpeed = 200;
-        const erasingSpeed = 120;
-
-        function type() {
-            if (charIndex < texts[index].length) {
-                currentText += texts[index][charIndex];
-                typingEffect.textContent = currentText;
-                charIndex++;
-                setTimeout(type, typingSpeed);
-            } else {
-                setTimeout(erase, 2000);
-            }
-        }
-
-        function erase() {
-            if (charIndex > 0) {
-                currentText = currentText.slice(0, -1);
-                typingEffect.textContent = currentText;
-                charIndex--;
-                setTimeout(erase, erasingSpeed);
-            } else {
-                index = (index + 1) % texts.length;
-                setTimeout(type, 500);
-            }
-        }
-
-        document.addEventListener("DOMContentLoaded", () => {
-            setTimeout(type, 1000);
-        });
-    </script>
 </body>
 </html>
