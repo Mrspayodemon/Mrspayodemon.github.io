@@ -132,7 +132,123 @@
                 filter: hue-rotate(360deg);
             }
         }
-       
+        
+    <style>
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #0A0A0A;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1, h2 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.heading {
+  color: #00ffcc; /* Beautiful teal for headings */
+  margin-top: 20px;
+}
+
+/* Service Section */
+#services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+  width: 100%;
+}
+
+.service-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%; /* Adjusted for responsiveness */
+  max-width: 600px; /* Limits max size on larger screens */
+  background: #1e1e1e;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.service-content {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.widget {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+}
+
+/* Floating Widgets */
+.widget .bot-animation,
+.widget .portfolio-icon,
+.widget .todo-animation,
+.widget .website-animation {
+  background-size: contain;
+  width: 80px;
+  height: 80px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.widget .bot-animation {
+  background: url('telegram-bot-icon.gif') no-repeat center center;
+}
+
+.widget .portfolio-icon {
+  background: url('portfolio-icon.gif') no-repeat center center;
+}
+
+.widget .todo-animation {
+  background: url('todo-icon.gif') no-repeat center center;
+}
+
+.widget .website-animation {
+  background: url('website-icon.gif') no-repeat center center;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .service-box {
+    flex-direction: column;
+    width: 95%; /* Full width for small screens */
+    padding: 15px;
+  }
+
+  .widget {
+    width: 80px;
+    height: 80px;
+  }
+
+  .service-content {
+    text-align: center;
+  }
+}
+
+/* Float Animation for Widgets */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+</style>
     </style>
 </head>
 <body>
@@ -162,17 +278,63 @@
         </div>
     </section>
     <section id="services">
-        <div class="services">
-            <h2>Services</h2>
-            <p>I offer the following services:</p>
-            <ul>
-                <li>Telegram Bot Development</li>
-                <li>Web Portfolios</li>
-                <li>To-Do Lists</li>
-                <li>Websites</li>
-                <li>And many more...</li>
-            </ul>
-        </div>
+        <section id="services">
+  <div class="services">
+    <h2>Services</h2>
+
+    <!-- Telegram Bot Development -->
+    <div class="service-box">
+      <div class="service-content">
+        <h2>Telegram Bot Development</h2>
+        <p>
+          Transform your workflows with custom Telegram bots that automate tasks, provide instant customer support, or even manage group chats. These bots can handle everything from sending reminders to integrating with other applications, making your tasks easier and more efficient.
+        </p>
+      </div>
+      <div class="widget" id="telegram-widget">
+        <div class="bot-animation"></div>
+      </div>
+    </div>
+
+    <!-- Web Portfolios -->
+    <div class="service-box">
+      <div class="service-content">
+        <h2>Web Portfolios</h2>
+        <p>
+          Showcase your skills, projects, and achievements with a stunning, interactive web portfolio. A professionally designed portfolio enhances your online presence and leaves a lasting impression on potential employers or clients.
+        </p>
+      </div>
+      <div class="widget" id="portfolio-widget">
+        <div class="portfolio-icon"></div>
+      </div>
+    </div>
+
+    <!-- To-Do List Apps -->
+    <div class="service-box">
+      <div class="service-content">
+        <h2>To-Do List Apps</h2>
+        <p>
+          Stay organized and productive with sleek, user-friendly to-do list applications. These apps are designed to help you prioritize tasks, set deadlines, and achieve your goals with ease and efficiency.
+        </p>
+      </div>
+      <div class="widget" id="todo-widget">
+        <div class="todo-animation"></div>
+      </div>
+    </div>
+
+    <!-- Websites -->
+    <div class="service-box">
+      <div class="service-content">
+        <h2>Websites</h2>
+        <p>
+          Bring your ideas to life with fully responsive, modern websites tailored to your needs. Whether it's a business site, a blog, or an e-commerce platform, I ensure your online presence is both functional and visually captivating.
+        </p>
+      </div>
+      <div class="widget" id="website-widget">
+        <div class="website-animation"></div>
+      </div>
+    </div>
+  </div>
+</section>
     </section>
     <section id="contact">
         <div class="contact">
