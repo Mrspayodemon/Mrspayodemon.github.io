@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbershop Services</title>
+    <style>
+        /* Modern Barber-themed CSS */
+        :root {
+            --primary: #d4af37; /* Gold */
+            --secondary: #000000; /* Black */
+            --accent: #8b0000; /* Dark red */
+            --light: #f5f5f5;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--secondary);
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        
+        .services-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-header {
+            background: var(--secondary);
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .service-name {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .service-price {
+            font-size: 1.8rem;
+            color: var(--primary);
+            font-weight: 700;
+            margin: 10px 0;
+        }
+        
+        .service-desc {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .book-btn {
+            display: block;
+            width: 80%;
+            margin: 20px auto;
+            padding: 12px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .book-btn:hover {
+            background: #6d0000;
+        }
+        
+        /* Barber Pole Decoration */
+        .barber-pole {
+            height: 5px;
+            background: linear-gradient(90deg, 
+                var(--accent) 33%, 
+                white 33%, 
+                white 66%, 
+                var(--secondary) 66%);
+            margin-bottom: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+      .navbar {
+        background: var(--secondary);
+        width: 100%;
+        overflow: hidden;
+        place-items: center;
+        border-radius: 8px;
+        filter: transparent(10px);
+        }
+       .navbar a {
+        text-decoration: none;
+        display: block;
+        padding: 16px 18px;
+        color: var(--primary);
+        float: left;
+        font-family: arial, helvetica, sans-serif;
+        font-size: 18px;
+        position: sticky;
+       }
+       .navbar a:hover {
+         background: white;
+       }
+    </style>
+</head>
+<body>
+    <div class="services-container">
+       <div class="navbar">
+         <a href="#hot-towel-shave">Hottowel</a>
+         <a href="#haircut-beard">haircutbeard</a>
+         <a href="#buzz-cut">buuzcut</a>
+       </div>
+        <h2>Our Services</h2>
+        <div class="barber-pole"></div>
+        
+        <div class="services-grid">
+            <!-- Service 1 -->
+            <div class="service-card">
+                <div class="service-header">
+                    <h3 class="service-name">Classic Haircut</h3>
+                    <div class="service-price">$30</div>
+                </div>
+                <div class="service-desc">
+                    <p>Precision scissor or clipper cuts with expert styling and finishing.</p>
+                    <button class="book-btn">Book Now</button>
+                </div>
+            </div>
+            
+            <!-- Service 2 -->
+            <div class="service-card">
+                <div class="service-header">
+                    <h3 class="service-name">Beard Trim & Shaping</h3>
+                    <div class="service-price">$20</div>
+                </div>
+                <div class="service-desc">
+                    <p>Sharp, clean lines for a well-groomed beard with hot towel treatment.</p>
+                    <button class="book-btn">Book Now</button>
+                </div>
+            </div>
+            
+            <!-- Service 3 -->
+            <div class="service-card">
+                <div class="service-header">
+                    <h3 id="hot-towel-shave" class="service-name">Hot Towel Shave</h3>
+                    <div class="service-price">$35</div>
+                </div>
+                <div class="service-desc">
+                    <p>Traditional straight-razor shave with warm lather for baby-smooth skin.</p>
+                    <button class="book-btn">Book Now</button>
+                </div>
+            </div>
+            
+            <!-- Service 4 -->
+            <div class="service-card">
+                <div class="service-header">
+                    <h3 id="haircut-beard"class="service-name">Haircut & Beard Combo</h3>
+                    <div class="service-price">$45</div>
+                </div>
+                <div class="service-desc">
+                    <p>Complete grooming package with haircut and precision beard shaping.</p>
+                    <button class="book-btn">Book Now</button>
+                </div>
+            </div>
+            
+            <!-- Service 5 -->
+            <div class="service-card">
+                <div class="service-header">
+                    <h3 id="buzz-cut" class="service-name">Buzz Cut / Fade</h3>
+                    <div class="service-price">$25</div>
+                </div>
+                <div class="service-desc">
+                    <p>Classic taper fade, skin fade, or military buzz for sharp looks.</p>
+                    <button class="book-btn">Book Now</button>
+                </div>
+            </div>
+            
+            <!-- Service 6 -->
+            <div class="service-card">
+                <div class="service-header">
+                    <h3 class="service-name">Mustache Grooming</h3>
+                    <div class="service-price">$15</div>
+                </div>
+                <div class="service-desc">
+                    <p>Professional trimming and waxing for perfectly styled facial hair.</p>
+                    <button class="book-btn">Book Now</button>
+                </div>
+            </div>
+            
+            <!-- Service 7 -->
+            <div class="service-card">
+                <div class="service-header">
+                    <h3 class="service-name">Hair Coloring</h3>
+                    <div class="service-price">$50+</div>
+                </div>
+                <div class="service-desc">
+                    <p>Natural-looking gray coverage or bold color transformations.</p>
+                    <button class="book-btn">Book Now</button>
+                </div>
+            </div>
+            
+            <!-- Service 8 -->
+            <div class="service-card">
+                <div class="service-header">
+                    <h3 class="service-name">Scalp Treatment</h3>
+                    <div class="service-price">$25</div>
+                </div>
+                <div class="service-desc">
+                    <p>Hot oil massage and deep cleansing to promote healthy hair.</p>
+                    <button class="book-btn">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
