@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - LA_CASA_DE_BARBERSHOP</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root {
+            --primary: #d4af37;
+            --secondary: #000000;
+            --accent: #8b0000;
+            --light: #f5f5f5;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #f9f9f9;
+            color: var(--secondary);
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(6px);
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+        .navbar a {
+            text-decoration: none;
+            display: block;
+            padding: 18px 22px;
+            color: var(--accent);
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            transition: background 0.25s, color 0.25s;
+            border-radius: 7px;
+            margin: 0 8px;
+        }
+        .navbar a:hover,
+        .navbar a.active {
+            background: var(--light);
+            color: var(--accent);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.3rem;
+            color: var(--accent);
+            margin-bottom: 28px;
+            margin-top: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .barber-pole {
+            height: 5px;
+            background: linear-gradient(90deg, 
+                var(--accent) 33%, 
+                white 33%, 
+                white 66%, 
+                var(--secondary) 66%);
+            margin-bottom: 30px;
+            border-radius: 3px;
+        }
+        .contact-section {
+            max-width: 600px;
+            margin: 0 auto 38px auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            padding: 30px 24px 28px 24px;
+        }
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .contact-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 1.14rem;
+            color: var(--secondary);
+        }
+        .contact-list i {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-right: 16px;
+            width: 32px;
+            text-align: center;
+        }
+        .contact-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.22s;
+        }
+        .contact-link:hover {
+            color: var(--primary);
+        }
+
+        /* Aesthetic enhancements */
+        .contact-form {
+            background: var(--light);
+            border-radius: 10px;
+            padding: 24px 18px;
+            margin-top: 32px;
+            box-shadow: 0 2px 8px rgba(139,0,0,0.09);
+        }
+        .contact-form label {
+            display: block;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 6px;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 11px 12px;
+            margin-bottom: 18px;
+            border: 1.8px solid var(--primary);
+            border-radius: 7px;
+            background: #fff;
+            font-size: 1rem;
+            font-family: inherit;
+            color: var(--secondary);
+            resize: vertical;
+            transition: border-color 0.2s;
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: var(--accent);
+            outline: none;
+        }
+        .contact-form button {
+            background: var(--accent);
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            padding: 13px 34px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+            box-shadow: 0 1px 7px rgba(139,0,0,0.09);
+        }
+        .contact-form button:hover {
+            background: var(--primary);
+            color: var(--secondary);
+        }
+
+        /* Map & opening hours */
+        .contact-extra {
+            margin-top: 22px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .contact-map {
+            border-radius: 10px;
+            overflow: hidden;
+            border: 2px solid var(--primary);
+            box-shadow: 0 1px 10px rgba(212,175,55,0.08);
+        }
+        .opening-hours {
+            background: var(--light);
+            border-radius: 8px;
+            padding: 16px 20px;
+            color: var(--secondary);
+            border-left: 4px solid var(--accent);
+        }
+        .opening-hours h4 {
+            margin: 0 0 8px 0;
+            color: var(--accent);
+            font-size: 1.1rem;
+        }
+        .opening-hours ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            font-size: 1rem;
+        }
+        .opening-hours ul li {
+            margin-bottom: 4px;
+        }
+        @media (max-width: 700px) {
+            .contact-section {
+                padding: 18px 5px 18px 5px;
+            }
+            .contact-extra {
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <section class="contact-section">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="barber-pole"></div>
+        <ul class="contact-list">
+            <li>
+                <i class="fa-solid fa-envelope"></i>
+                <a class="contact-link" href="mailto:lacasadebarbershop@gmail.com">lacasadebarbershop@gmail.com</a>
+            </li>
+            <li>
+                <i class="fa-brands fa-instagram"></i>
+                <a class="contact-link" href="https://instagram.com/@la_casa_de_barbershop" target="_blank">Instagram: la_casa_de_barbershop</a>
+            </li>
+            <li>
+                <i class="fa-brands fa-whatsapp"></i>
+                <a class="contact-link" href="https://wa.me/+255625661190" target="_blank">+255 625 661 190</a>
+            </li>
+            <li>
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Street: Kigamboni (near round-about); Region: Dar-es-salaam</span>
+            </li>
+        </ul>
+
+        <!-- Contact Form -->
+        <form class="contact-form" autocomplete="off">
+            <label for="name"><i class="fa-solid fa-user"></i> Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="email"><i class="fa-solid fa-envelope"></i> Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+
+            <label for="message"><i class="fa-solid fa-comment-dots"></i> Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="How can we help you?" required></textarea>
+
+            <button type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+        </form>
+
+        <div class="contact-extra">
+            <div class="contact-map">
+                <!-- this is the live location of barbershop -->
+                 
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31691.71650682345!2d39.32346488150635!3d-6.83477002609579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4b0018494ee3%3A0x490fe7b1faeeac4c!2sLa%20Casa%20De%20Barbershop%20and%20Car%20wash!5e0!3m2!1sen!2stz!4v1750415627659!5m2!1sen!2stz" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+            <div class="opening-hours">
+                <h4><i class="fa-solid fa-clock"></i> Opening Hours</h4>
+                <ul>
+                    <li>Mon-Fri: 08:30 - 20:00</li>
+                    <li>Sat: 09:00 - 21:00</li>
+                    <li>Sun: 10:00 - 18:00</li>
+                </ul>
+            </div>
+        </div>
+        <p style="text-align:center; color: grey; margin-top:32px;">
+            &copy;2025 la_casa_de_barbershop. All rights reserved.
+        </p>
+    </section>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - LA_CASA_DE_BARBERSHOP</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root {
+            --primary: #d4af37;
+            --secondary: #000000;
+            --accent: #8b0000;
+            --light: #f5f5f5;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #f9f9f9;
+            color: var(--secondary);
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(6px);
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+        .navbar a {
+            text-decoration: none;
+            display: block;
+            padding: 18px 22px;
+            color: var(--accent);
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            transition: background 0.25s, color 0.25s;
+            border-radius: 7px;
+            margin: 0 8px;
+        }
+        .navbar a:hover,
+        .navbar a.active {
+            background: var(--light);
+            color: var(--accent);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.3rem;
+            color: var(--accent);
+            margin-bottom: 28px;
+            margin-top: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: 'Playfair Display', serif;
+        }
+        .barber-pole {
+            height: 5px;
+            background: linear-gradient(90deg, 
+                var(--accent) 33%, 
+                white 33%, 
+                white 66%, 
+                var(--secondary) 66%);
+            margin-bottom: 30px;
+            border-radius: 3px;
+        }
+        .gallery-section {
+            max-width: 1100px;
+            margin: 0 auto 40px auto;
+            padding: 24px 18px 36px 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        .gallery-placeholder {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 22px;
+            width: 100%;
+            min-height: 160px;
+        }
+        .gallery-item {
+            border: 2px dashed var(--primary);
+            border-radius: 8px;
+            background: var(--light);
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            font-size: 1.2rem;
+            font-weight: 600;
+            opacity: 0.7;
+            flex-direction: column;
+            transition: box-shadow 0.3s, transform 0.3s;
+            background-size: cover;
+            background-position: center;
+        }
+        .gallery-item:hover {
+            box-shadow: 0 8px 32px rgba(212,175,55,0.16);
+            opacity: 1;
+            transform: scale(1.04);
+        }
+        .gallery-img-preview {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px rgba(139,0,0,0.08);
+            max-width: 240px;
+            max-height: 210px;
+            transition: transform 0.3s;
+        }
+        .gallery-caption {
+            margin-top: 12px;
+            font-size: 1rem;
+            color: var(--secondary);
+            opacity: 0.8;
+        }
+        .gallery-info {
+            margin-top: 32px;
+            text-align: center;
+            opacity: 0.6;
+            color: var(--accent);
+            font-size: 1rem;
+        }
+        @media (max-width: 1000px) {
+            .gallery-placeholder {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            }
+        }
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .gallery-placeholder {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 480px) {
+            .gallery-placeholder {
+                grid-template-columns: 1fr;
+            }
+            .navbar a {
+                font-size: 16px;
+                padding: 14px 8px;
+            }
+            .gallery-img-preview {
+                max-width: 100%;
+                max-height: 160px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <section class="gallery-section">
+        <h2 class="section-title">Gallery</h2>
+        <div class="barber-pole"></div>
+        <div class="gallery-placeholder">
+            <div class="gallery-item">
+                <img src="image/lacasa08.PNG" alt="" class="gallery-img-preview">
+                <div class="gallery-caption"></div>
+            </div>
+            <div class="gallery-item">
+                <img src="image/lacasa06.PNG" alt="" class="gallery-img-preview">
+                <div class="gallery-caption"></div>
+            </div>
+            <div class="gallery-item">
+                <img src="image/lacasa07.PNG" alt="" class="gallery-img-preview">
+                <div class="gallery-caption"></div>
+            </div>
+            <div class="gallery-item">
+                <img src="image/lacasa03.PNG" alt="" class="gallery-img-preview">
+                <div class="gallery-caption"></div>
+            </div>
+        </div>
+        <div class="gallery-info">
+            *Check back soon for snapshots of our stylish cuts and happy clients!
+        </div>
+    </section>
+</body>
+</html>
