@@ -13,7 +13,7 @@
         :root {
             --primary: #d4af37; /* Gold */
             --secondary: #000000; /* Black */
-            --accent: #8b0000; /* Dark red */
+            --accent: #8b0000;   /* Dark red */
             --light: #f5f5f5;
         }
 
@@ -26,7 +26,6 @@
             padding: 0;
         }
 
-        /* Sticky, transparent, blur navbar */
         .navbar {
             position: sticky;
             top: 0;
@@ -58,7 +57,6 @@
             color: var(--accent);
         }
 
-        /* Home Section */
         .home-section {
             display: flex;
             flex-direction: column;
@@ -93,186 +91,50 @@
             max-width: 600px;
             margin: 0 auto 12px auto;
         }
-
-        /* Section header */
-        .section-title {
-            text-align: center;
-            font-size: 2.3rem;
-            color: var(--accent);
-            margin-bottom: 28px;
-            margin-top: 40px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-family: 'Playfair Display', serif;
-        }
-
-        /* Gallery Section */
-        .gallery-section {
-            max-width: 1100px;
-            margin: 0 auto 40px auto;
-            padding: 24px 18px 50px 18px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border-radius: 12px;
-            background: white;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-        }
-        .gallery-placeholder {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-            gap: 22px;
-            width: 100%;
-            min-height: 160px;
-        }
-        .gallery-item {
-            border: 2px dashed var(--primary);
-            border-radius: 8px;
-            background: var(--light);
-            height: 150px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--accent);
-            font-size: 1.2rem;
-            font-weight: 600;
-            opacity: 0.7;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            max-width: 600px;
-            margin: 0 auto 38px auto;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            padding: 30px 24px 28px 24px;
-        }
-        .contact-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .contact-list li {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            font-size: 1.14rem;
+        .home-highlight {
+            background: var(--primary);
             color: var(--secondary);
-        }
-        .contact-list i {
-            font-size: 1.5rem;
-            color: var(--primary);
-            margin-right: 16px;
-            width: 32px;
-            text-align: center;
-        }
-        .contact-link {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.22s;
-        }
-        .contact-link:hover {
-            color: var(--primary);
-        }
-
-        /* Barber Pole Decoration */
-        .barber-pole {
-            height: 5px;
-            background: linear-gradient(90deg, 
-                var(--accent) 33%, 
-                white 33%, 
-                white 66%, 
-                var(--secondary) 66%);
-            margin-bottom: 30px;
-            border-radius: 3px;
-        }
-
-        /* Services Section (copied from original) */
-        .services-container {
-            max-width: 1000px;
-            margin: 0 auto 42px auto;
-        }
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-        .service-card {
-            background: white;
+            font-size: 1.05rem;
+            padding: 8px 18px;
             border-radius: 8px;
-            overflow: hidden;
+            margin: 16px 0 0 0;
+            display: inline-block;
+            font-weight: 600;
+            box-shadow: 0 1px 7px rgba(212,175,55,0.06);
+        }
+        .home-image {
+            border-radius: 9px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            margin-top: 16px;
+            transition: transform 0.3s;
         }
-        .service-card:hover {
-            transform: translateY(-10px);
+        .home-image:hover {
+            transform: translateY(-10px) scale(1.05);
         }
-        .service-header {
-            background: var(--secondary);
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
-        .service-name {
-            margin: 0;
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-        .service-price {
-            font-size: 1.8rem;
-            color: var(--primary);
-            font-weight: 700;
-            margin: 10px 0;
-        }
-        .service-desc {
-            padding: 20px;
-            text-align: center;
-        }
-        .book-btn {
-            display: block;
-            width: 80%;
-            margin: 20px auto;
-            padding: 12px;
+        .cta-btn {
             background: var(--accent);
-            color: white;
+            color: #fff;
             border: none;
             border-radius: 5px;
-            font-weight: bold;
+            margin-top: 28px;
+            padding: 14px 36px;
+            font-size: 1.1rem;
+            font-weight: 700;
             cursor: pointer;
             transition: background 0.3s;
+            box-shadow: 0 2px 8px rgba(139,0,0,0.07);
         }
-        .book-btn:hover {
-            background: #6d0000;
+        .cta-btn:hover {
+            background: var(--primary);
+            color: var(--secondary);
         }
 
-        @media (max-width: 1000px) {
-            .gallery-placeholder {
-                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            }
-        }
         @media (max-width: 768px) {
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
             .home-title {
                 font-size: 2.1rem;
             }
-            .section-title {
-                font-size: 1.5rem;
-            }
-            .gallery-placeholder {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-        @media (max-width: 480px) {
-            .gallery-placeholder {
-                grid-template-columns: 1fr;
-            }
-            .navbar a {
-                font-size: 16px;
-                padding: 14px 8px;
+            .home-highlight {
+                font-size: 0.95rem;
             }
         }
     </style>
@@ -280,162 +142,26 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html" class="active">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
     </nav>
 
     <!-- Home Section -->
-    <section id="home" class="home-section">
+    <section class="home-section">
         <h1 class="home-title">Welcome to La Casa De Barbershop</h1>
         <div class="home-welcome">Where Style Meets Precision</div>
         <div class="home-desc">
             La Casa Barbershop is your modern destination for premium grooming and timeless style in the heart of the city. 
             Our skilled barbers blend classic techniques with the latest trends to deliver the perfect cut, shave, and experience for every gentleman. 
             Step into our welcoming space and enjoy a personalized touch, attention to detail, and a relaxing atmosphere that keeps you looking sharp and feeling confident.
-        </div><br>
-        <img src="images/lacasa04.PNG" alt="Barbershop Interior" width="350" height="350; border-radius: 9px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); img:hover: transform: translateY(-10px);">
-    </section>
-
-    <!-- Services Section -->
-    <div id="services" class="services-container">
-        <h2 class="section-title">Our Services</h2>
-        <div class="barber-pole"></div>
-        <div class="services-grid">
-            <!-- Service 1 -->
-            <div class="service-card">
-                <div class="service-header">
-                    <h3 class="service-name">Classic Haircut</h3>
-                    <div class="service-price">10,000Tsh/=</div>
-                </div>
-                <div class="service-desc">
-                    <p>Precision scissor or clipper cuts with expert styling and finishing.</p>
-                    <button class="book-btn">Book Now</button>
-                </div>
-            </div>
-            <!-- Service 2 -->
-            <div class="service-card">
-                <div class="service-header">
-                    <h3 class="service-name">Beard Trim & Shaping</h3>
-                    <div class="service-price">10,000Tsh/=</div>
-                </div>
-                <div class="service-desc">
-                    <p>Sharp, clean lines for a well-groomed beard with hot towel treatment.</p>
-                    <button class="book-btn">Book Now</button>
-                </div>
-            </div>
-            <!-- Service 3 -->
-            <div class="service-card">
-                <div class="service-header">
-                    <h3 id="hot-towel-shave" class="service-name">Hot Towel Shave</h3>
-                    <div class="service-price">12,000Tsh/=</div>
-                </div>
-                <div class="service-desc">
-                    <p>Traditional straight-razor shave with warm lather for baby-smooth skin.</p>
-                    <button class="book-btn">Book Now</button>
-                </div>
-            </div>
-            <!-- Service 4 -->
-            <div class="service-card">
-                <div class="service-header">
-                    <h3 id="haircut-beard" class="service-name">Haircut & Beard Combo</h3>
-                    <div class="service-price">15,000Tsh/=</div>
-                </div>
-                <div class="service-desc">
-                    <p>Complete grooming package with haircut and precision beard shaping.</p>
-                    <button class="book-btn">Book Now</button>
-                </div>
-            </div>
-            <!-- Service 5 -->
-            <div class="service-card">
-                <div class="service-header">
-                    <h3 id="buzz-cut" class="service-name">Buzz Cut / Fade</h3>
-                    <div class="service-price">8,000Tsh/=</div>
-                </div>
-                <div class="service-desc">
-                    <p>Classic taper fade, skin fade, or military buzz for sharp looks.</p>
-                    <button class="book-btn">Book Now</button>
-                </div>
-            </div>
-            <!-- Service 6 -->
-            <div class="service-card">
-                <div class="service-header">
-                    <h3 class="service-name">Mustache Grooming</h3>
-                    <div class="service-price">6,000Tsh/=</div>
-                </div>
-                <div class="service-desc">
-                    <p>Professional trimming and waxing for perfectly styled facial hair.</p>
-                    <button class="book-btn">Book Now</button>
-                </div>
-            </div>
-            <!-- Service 7 -->
-            <div class="service-card">
-                <div class="service-header">
-                    <h3 class="service-name">Hair Coloring</h3>
-                    <div class="service-price">20,000Tsh/=</div>
-                </div>
-                <div class="service-desc">
-                    <p>Natural-looking gray coverage or bold color transformations.</p>
-                    <button class="book-btn">Book Now</button>
-                </div>
-            </div>
-            <!-- Service 8 -->
-            <div class="service-card">
-                <div class="service-header">
-                    <h3 class="service-name">Scalp Treatment</h3>
-                    <div class="service-price">25,000Tsh/=</div>
-                </div>
-                <div class="service-desc">
-                    <p>Hot oil massage and deep cleansing to promote healthy hair.</p>
-                    <button class="book-btn">Book Now</button>
-                </div>
-            </div>
         </div>
-    </div>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery-section">
-        <h2 class="section-title">Gallery</h2>
-          <div class="barber-pole"></div>
-        <div class="gallery-placeholder">
-            <div class="gallery-item"><i class="fa-regular fa-image"></i> Image Placeholder</div>
-            <div class="gallery-item"><i class="fa-regular fa-image"></i> Image Placeholder</div>
-            <div class="gallery-item"><i class="fa-regular fa-image"></i> Image Placeholder</div>
-            <div class="gallery-item"><i class="fa-regular fa-image"></i> Image Placeholder</div>
-        </div>
-        <p style="opacity:0.6; margin-top:20px; color:var(--accent); font-size:1rem;">
-            *Check back soon for snapshots of our stylish cuts and happy clients!
-        </p>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <h2 class="section-title">Contact Us</h2>
-        <div class="barber-pole"></div>
-        <ul class="contact-list">
-            <li>
-                <i class="fa-solid fa-envelope"></i>
-                <a class="contact-link" href="mailto:lacasabarbershop@example.com">lacasabarbershop@example.com</a>
-            </li>
-            <li>
-                <i class="fa-brands fa-instagram"></i>
-                <a class="contact-link" href="https://instagram.com/lacasabarbershop" target="_blank">Instagram: @lacasa_barbershop</a>
-            </li>
-            <li>
-                <i class="fa-brands fa-tiktok"></i>
-                <a class="contact-link" href="https://tiktok.com/@lacasabarbershop" target="_blank"> TikTok: @lacasabarbershop</a>
-            </li>
-            <li>
-                <i class="fa-brands fa-whatsapp"></i>
-                <a class="contact-link" href="https://wa.me/"+255625661190 target="_blank">+255 625 661 190</a>
-            </li>
-            <li>
-                <i class="fa-solid fa-location-dot"></i>
-                <span>Street: Kigamboni(Darajani); Region: Dar-es-salaam</span>
-            </li>
-        </ul>
-     <p style="place-items: center; justify-content: center; align-items: center; color: grey; padding-left:110px ">&copy2025 lacasa_barbershop All rights reserved</p>
+        <img class="home-image" src="image/lacasa04.PNG" alt="Barbershop exterior" width="400" height="400">
+        <br>
+         <img class="home-image" src="image/front.jpg" alt="Barbershop exterior" width="400" height="400">
+         <br>
+        <a href="services.html"><button class="cta-btn"><i class="fa-solid fa-scissors"></i> Explore Our Services</button></a>
     </section>
 </body>
 </html>
