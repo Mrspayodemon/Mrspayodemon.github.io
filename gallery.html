@@ -132,6 +132,23 @@
             color: var(--accent);
             font-size: 1rem;
         }
+        .cta-btn {
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            margin-top: 50px;
+            padding: 14px 36px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.3s;
+            box-shadow: 0 2px 8px rgba(139,0,0,0.07);
+        }
+        .cta-btn:hover {
+            background: var(--primary);
+            color: var(--secondary);
+        }
         @media (max-width: 1000px) {
             .gallery-placeholder {
                 grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -168,29 +185,30 @@
         <a href="contact.html">Contact</a>
     </nav>
     <section class="gallery-section">
-<h2 class="section-title">Gallery</h2>
+        <h2 class="section-title">Gallery</h2>
         <div class="barber-pole"></div>
         <div class="gallery-placeholder">
             <div class="gallery-item">
-                <img src="images/lacasa08.PNG" alt="" class="gallery-img-preview">
+                <img src="image/lacasa08.PNG" alt="" class="gallery-img-preview">
                 <div class="gallery-caption"></div>
             </div>
             <div class="gallery-item">
-                <img src="images/lacasa06.PNG" alt="" class="gallery-img-preview">
+                <img src="image/lacasa06.PNG" alt="" class="gallery-img-preview">
                 <div class="gallery-caption"></div>
             </div>
             <div class="gallery-item">
-                <img src="images/lacasa07.PNG" alt="" class="gallery-img-preview">
+                <img src="image/lacasa07.PNG" alt="" class="gallery-img-preview">
                 <div class="gallery-caption"></div>
             </div>
             <div class="gallery-item">
-                <img src="images/lacasa03.PNG" alt="" class="gallery-img-preview">
+                <img src="image/lacasa03.PNG" alt="" class="gallery-img-preview">
                 <div class="gallery-caption"></div>
             </div>
         </div>
         <div class="gallery-info">
             *Check back soon for snapshots of our stylish cuts and happy clients!
         </div>
+        <a href="contact.html"><button class="cta-btn"><i class="fa-solid fa-phone"></i> Click to Explore Our contact</button></a>
     </section>
 </body>
 </html>
