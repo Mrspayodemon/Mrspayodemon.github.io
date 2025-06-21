@@ -194,6 +194,29 @@
         .opening-hours ul li {
             margin-bottom: 4px;
         }
+        .cta-btn {
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            margin-top: 28px;
+            padding: 14px 36px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.3s;
+            box-shadow: 0 2px 8px rgba(139,0,0,0.07);
+            
+        }
+        .cta-btn:hover {
+            background: var(--primary);
+            color: var(--secondary);
+        }
+        .CTA {
+            place-items: center;
+            justify-content: center;
+            padding-left: 150px;
+        }
         @media (max-width: 700px) {
             .contact-section {
                 padding: 18px 5px 18px 5px;
@@ -262,10 +285,15 @@
                     <li>Sun: 10:00 - 18:00</li>
                 </ul>
             </div>
+            <div class="CTA">
+            <a href="index.html"><button class="cta-btn"><i class="fa-solid fa-home"></i> Click to go back home</button></a>
+            </div>
         </div>
         <p style="text-align:center; color: grey; margin-top:32px;">
             &copy;2025 la_casa_de_barbershop. All rights reserved.
         </p>
+
+        <p style="text-align:center; color: grey; margin-top:32px;" >developed by <i class="fa-solid fa-code"> coders_squad </i></p>
     </section>
 </body>
 </html>
